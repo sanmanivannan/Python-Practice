@@ -36,4 +36,20 @@ for i in range(n):
     print(res)
     tot = tot + res
 print(tot)"""
+'''calendar,date,datetime'''
+"""import calendar
+y = 2020
+m = 8
+print(calendar.month(y,m))
+
+from datetime import date
+f_date = date(2014, 7, 2)
+l_date = date(2014, 7, 11)
+delta = l_date - f_date
+print(delta.days,"day")"""
+
+
+
+
+
 
