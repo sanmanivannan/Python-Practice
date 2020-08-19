@@ -26,5 +26,14 @@ f_extns = filename.split(".")
 print ("The extension of the file is : " + repr(f_extns[-1]))
 """
 
-
+""" that accepts an integer (n) and computes the value of n+nn+nnn"""
+"""n = 5
+res, tot = 0, 0
+# if n==0:
+#    print(0)
+for i in range(n):
+    res = int(str(res) + str(n))
+    print(res)
+    tot = tot + res
+print(tot)"""
 
