@@ -23,9 +23,15 @@ class Motorcycle(Vehicle):
         self.general_usage()
 
 c = Car()  # OBJECT derived from the Car Class
-c.character()
+c.character()  #Calling the Method inside the Car Class
 #c.general_usage()
 
 m = Motorcycle()  # OBJECT derived from the Motorcycle class
-m.character()
+m.character()  #Calling the Method inside the Motorcycle Class
 #m.general_usage()
+
+# isinstace function used to find whether a OBJECT is derived from the CLASS OR NOT
+print(isinstance(c,Car))
+
+# issubclass function is used to find whether a CLASS ID INHERITED FROM ANOTHER CLASS OR NOT
+print(issubclass(Car,Vehicle))
