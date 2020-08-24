@@ -10,6 +10,7 @@ class Car(Vehicle):
         print("I have", self.wheels, "wheels and have roof:", self.roof)
     def character(self):   #METHOD INSIDE THE CAR CLASS
         print("printing characteristics of a car:METHOD INSIDE THE CAR CLASS")
+        self.general_usage()
 
 class Motorcycle(Vehicle):
     def __init__(self):    #PROPERTY OR CONSTRUCTOR
@@ -19,6 +20,7 @@ class Motorcycle(Vehicle):
         print("I have", self.wheels, "wheels and have roof:", self.roof)
     def character(self):   #METHOD INSIDE THE CAR CLASS
         print("printing characteristics of a Motorcycle : METHOD INSIDE THE MOTORCYCLE CLASS")
+        self.general_usage()
 
 c = Car()  # OBJECT derived from the Car Class
 c.character()
