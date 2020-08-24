@@ -1,5 +1,5 @@
 class Human:   # Creating a new class with a name Human
-    def __init__(self, n , o): # creating a first PROPERTY of the class Human
+    def __init__(self, n , o): # creating a first PROPERTY of the class Human, This is also called as the constructor
         self.name = n
         self.occupation = o
 
