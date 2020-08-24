@@ -24,8 +24,8 @@ class Motorcycle(Vehicle):
 
 c = Car()  # OBJECT derived from the Car Class
 c.character()
-c.general_usage()
+#c.general_usage()
 
 m = Motorcycle()  # OBJECT derived from the Motorcycle class
 m.character()
-m.general_usage()
+#m.general_usage()
