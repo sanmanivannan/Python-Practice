@@ -18,9 +18,7 @@ for i in optionslist:
         i.click()
         break
 
-    print(i.text)
-
-
+print(i.text)
 
 time.sleep(5)
 driver.quit()
