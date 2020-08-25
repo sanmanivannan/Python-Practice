@@ -12,7 +12,6 @@ driver.find_element(By.NAME, "q").send_keys("Selenium Python")
 
 optionslist = driver.find_elements(By.CSS_SELECTOR,"ul.erkvQe li span")
 print(len(optionslist))
-
 for i in optionslist:
     if i.text == "Selenium Python Tutorial":
         i.click()
