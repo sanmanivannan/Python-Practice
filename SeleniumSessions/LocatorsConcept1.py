@@ -35,7 +35,8 @@ driver.find_element(By.CSS_SELECTOR, "#Form_submitForm_JobTitle").send_keys("Man
 
 #FindElement By XPATH
 # If you wish to use the XPATH using the class name from the inspect, just use like this(//input[@class='class1 class2']
-#driver.implicitly_wait(5)
+#driver.find_element(By.XPATH, "//input[@class='class1 class2']").send_keys("fnamelname")
+
 
 #FindElement By LINK_TEXT(only for links)
 #driver.find_element(By.LINK_TEXT, "Features").click()
@@ -46,11 +47,14 @@ driver.find_element(By.CSS_SELECTOR, "#Form_submitForm_JobTitle").send_keys("Man
 #FindElement By TAG_NAME
 links1 = driver.find_elements(By.TAG_NAME, "a")
 print(len(links1))
-
+#prints the list of hyperlinks on the links
 for i in links1:
     print(i.text)
     print(i.get_attribute('href'))
-
+#prints the list of images on the links
+for j in links1:
+    print(j.text)
+    print(j.get_attribute('img'))
 
 
 
