@@ -51,10 +51,15 @@ print(len(links1))
 for i in links1:
     print(i.text)
     print(i.get_attribute('href'))
+
+#FindElement By TAG_NAME
+imagelinks2 = driver.find_elements(By.TAG_NAME, "img")
+print(len(imagelinks2))
 #prints the list of images on the links
-for j in links1:
+for j in imagelinks2:
     print(j.text)
     print(j.get_attribute('img'))
+
 
 
 
