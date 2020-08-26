@@ -70,12 +70,12 @@ select_fun(ele1_indus,'Travel')"""
 ele2 = driver.find_element(By.NAME, 'Industry')
 select_list(ele2)"""
 
-#Write functions to selct the option(s) from the dropdown without using the SELECT method
+#Write functions to selct the option(s) from the dropdown without using the SELECT method and use find.elementsS(XPATH)
 
-drop1 = driver.find_elements(By.XPATH, '//*[@id="Form_submitForm_Country"]/option')
+"""drop1 = driver.find_elements(By.XPATH, '//*[@id="Form_submitForm_Country"]/option')
 print(len(drop1))
 for i in drop1:
     #print(i.text)
     if (i.text) == 'India':
         i.click()
-        break
+        break"""
