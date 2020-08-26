@@ -27,7 +27,8 @@ driver.find_element(By.NAME, "LastName").send_keys("LName")
 
 #FindElement By CSS SELECTOR, just use the ID or Name value and have #in front of the value
 driver.find_element(By.CSS_SELECTOR, "#Form_submitForm_JobTitle").send_keys("Manager")
-#FindElement By CLASS_NAME
+
+#FindElement By CLASS_NAME. Always use only the unique class name if you have multiple class name in that parameter
 #driver.find_element(By.CLASS_NAME, "email text").send_keys("test123@gmail.com")
 
 #FindElement By XPATH
