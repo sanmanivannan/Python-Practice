@@ -56,7 +56,7 @@ select_fun(ele1,'United States')
 select_fun(ele1_indus,'Travel')"""
 
 
-#below is the user defined function to list out and print all the options on a dropdown menu
+#below is the user defined function to list out, count and print all the options on a dropdown menu
 """def select_list(ele):
     select2 = Select(ele)
     dropdownlist = select2.options
@@ -71,3 +71,11 @@ ele2 = driver.find_element(By.NAME, 'Industry')
 select_list(ele2)"""
 
 #Write functions to selct the option(s) from the dropdown without using the SELECT method
+
+drop1 = driver.find_elements(By.XPATH, '//*[@id="Form_submitForm_Country"]/option')
+print(len(drop1))
+for i in drop1:
+    #print(i.text)
+    if (i.text) == 'India':
+        i.click()
+        break
