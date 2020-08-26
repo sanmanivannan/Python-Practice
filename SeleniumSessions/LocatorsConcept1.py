@@ -26,7 +26,7 @@ driver.find_element(By.ID, "Form_submitForm_FirstName").send_keys("FName")
 driver.find_element(By.NAME, "LastName").send_keys("LName")
 
 #FindElement By CSS SELECTOR, just use the ID or Name value and have #in front of the value
-# If you wish to usae the CSS Selector using the class name from the inspect, just use like this( input.class1.class2.class3)
+# If you wish to use the CSS Selector using the class name from the inspect, just use like this( input.class1.class2.class3)
 driver.find_element(By.CSS_SELECTOR, "#Form_submitForm_JobTitle").send_keys("Manager")
 
 #FindElement By CLASS_NAME. Always use only the unique class name if you have multiple class name in that parameter
