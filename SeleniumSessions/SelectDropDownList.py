@@ -3,6 +3,7 @@ Select from the drop down
 Deselect from the drop down #You may only deselect all options of a multi-select
 Write functions to avoid repeated usage of Select from the drop down
 Write functions to list all the OPTIONS available on the drop down menu
+Write functions to selct the option(s) from the dropdown without using the SELECT method
 '''
 from selenium import webdriver  #Importing Selenium Lib
 from selenium.webdriver.common.by import By
@@ -34,7 +35,7 @@ print(driver.title)
 #select.select_by_index(4)
 
 #To find whether the dropdown is multi select or not
-#print(select.is_multiple)
+'''print(select.is_multiple)'''
 
 #You may only deselect all options of a multi-select
 #select.deselect_all()
@@ -45,18 +46,18 @@ print(driver.title)
 #instead of writing the Select statesments again and again repeatedly for the dropdowns,
 #we write the user defined functions as mentioned below, so that it could be reused when ever needed
 
-#def select_fun(ele,value):
-#    select1 = Select(ele)
-#    select1.select_by_value(value)
+"""def select_fun(ele,value):
+     select1 = Select(ele)
+     select1.select_by_value(value)
 
-#ele1 = driver.find_element(By.NAME, 'Country')
-#ele1_indus = driver.find_element(By.NAME,'Industry')
-#select_fun(ele1,'United States')
-#select_fun(ele1_indus,'Travel')
+ele1 = driver.find_element(By.NAME, 'Country')
+ele1_indus = driver.find_element(By.NAME,'Industry')
+select_fun(ele1,'United States')
+select_fun(ele1_indus,'Travel')"""
 
 
 #below is the user defined function to list out and print all the options on a dropdown menu
-def select_list(ele):
+"""def select_list(ele):
     select2 = Select(ele)
     dropdownlist = select2.options
     print(len(dropdownlist))
@@ -64,7 +65,9 @@ def select_list(ele):
         print(i.text)
         if (i.text) == "Travel":
             select2.select_by_visible_text("Travel")
-
+            break
 
 ele2 = driver.find_element(By.NAME, 'Industry')
-select_list(ele2)
+select_list(ele2)"""
+
+#Write functions to selct the option(s) from the dropdown without using the SELECT method
