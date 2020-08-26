@@ -58,7 +58,7 @@ print(len(imagelinks2))
 #prints the list of images on the links
 for j in imagelinks2:
     print(j.text)
-    print(j.get_attribute('img'))
+    print(j.get_attribute('src'))
 
 
 
