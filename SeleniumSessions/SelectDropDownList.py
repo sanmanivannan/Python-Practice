@@ -56,7 +56,7 @@ select_fun(ele1,'United States')
 select_fun(ele1_indus,'Travel')"""
 
 
-#below is the user defined function to list out, count and print all the options on a dropdown menu
+#below is the user defined function to list out, count and print all the OPTIONS on a dropdown menu
 """def select_list(ele):
     select2 = Select(ele)
     dropdownlist = select2.options
