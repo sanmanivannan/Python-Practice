@@ -46,7 +46,7 @@ dropdown_list = driver.find_elements(By.CSS_SELECTOR, 'span.comboTreeItemTitle')
 value1 = ['choice 1', 'choice 6', 'choice 2 1'] #multi select
 select_options(dropdown_list, value1)"""
 
-#including the select all option too
+#including the select ALL option too
 
 def select_options(droplist,value):
     if value[0] != 'all':

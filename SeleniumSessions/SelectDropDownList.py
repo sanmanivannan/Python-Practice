@@ -37,7 +37,7 @@ print(driver.title)
 #To find whether the dropdown is multi select or not
 '''print(select.is_multiple)'''
 
-#You may only deselect all options of a multi-select
+#You may only deselect all options only on the multi-select list
 #select.deselect_all()
 #select.deselect_by_index(4)
 #select.deselect_by_value()
