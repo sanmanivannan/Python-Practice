@@ -7,7 +7,7 @@ import time
 #We use ChromeOptions method for HEADLESS OPERATIONS for Chrome browser
 options = webdriver.ChromeOptions()
 options.headless = True
-
+#options.add_argument("--incognito") #can use add_argument to run on incognito mode as well
 """#We use ChromeOptions method for HEADLESS OPERATIONS for Firefox browser
 options = webdriver.FirefoxOptions()
 options.headless = True
