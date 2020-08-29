@@ -4,9 +4,17 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.action_chains import ActionChains
 import time
-#We use ChromeOptions method for HEADLESS OPERATIONS
+#We use ChromeOptions method for HEADLESS OPERATIONS for Chrome browser
 options = webdriver.ChromeOptions()
 options.headless = True
+
+"""#We use ChromeOptions method for HEADLESS OPERATIONS for Firefox browser
+options = webdriver.FirefoxOptions()
+options.headless = True
+
+#We use ChromeOptions method for HEADLESS OPERATIONS for IE browser
+options = webdriver.IeOptions()
+options.headless = True"""
 
 driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 #In case if you are using without the webdriver manager also.,we can use the headless options
