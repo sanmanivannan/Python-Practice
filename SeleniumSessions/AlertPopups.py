@@ -42,8 +42,6 @@ driver.get("https://cgi-lib.berkeley.edu/ex/fup.html")
 driver.find_element(By.NAME, "upfile").send_keys("C:\\Users\\Vishnuram\\Desktop\\test.txt")
 driver.find_element(By.XPATH, "/html/body/form/input[3]").click()
 
-#find element--sendkeys
-#find element--click
 
 
 
