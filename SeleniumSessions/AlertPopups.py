@@ -34,11 +34,13 @@ print(headervalue)
 """
 
 #Handling Authentication POPUP
-
-
-
+"""driver.get('https://admin:admin@the-internet.herokuapp.com/basic_auth') #providing the credentials on the URL itself"""
 
 #Handling File Uploads
+
+driver.get("https://cgi-lib.berkeley.edu/ex/fup.html")
+driver.find_element(By.NAME, "upfile").send_keys("C:\\Users\\Vishnuram\\Desktop\\test.txt")
+driver.find_element(By.XPATH, "/html/body/form/input[3]").click()
 
 #find element--sendkeys
 #find element--click
