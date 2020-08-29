@@ -21,16 +21,18 @@ time.sleep(5)
         break"""
 
 #Write a function for the above logic to click an option from the jquery dropdown
-"""def select_options(droplist,value):
+def select_options(droplist,value):
     for j in droplist:
         if j.text == value:
             j.click()
             break
 #provide the list and values as mentioned below
 #however, we cant always provide option selection values one by one if we have multiple selection, as its a crudew method
-select_options(dropdown_list,'choice 6')
+dropdown_list = driver.find_elements(By.CSS_SELECTOR, 'span.comboTreeItemTitle')
+select_options(dropdown_list,'choice 4')
 select_options(dropdown_list,'choice 2')
-select_options(dropdown_list,'choice 5')"""
+select_options(dropdown_list,'choice 5')
+select_options(dropdown_list,'choice 3')
 
 #Instead of providing the value one by one, have the values in the form of LIST
 """def select_options(droplist,value):
@@ -48,7 +50,7 @@ select_options(dropdown_list, value1)"""
 
 #including the select ALL option too
 
-def select_options(droplist,value):
+"""def select_options(droplist,value):
     if value[0] != 'all':
       for i in droplist:
         print(i.text)
@@ -65,6 +67,6 @@ def select_options(droplist,value):
 
 dropdown_list = driver.find_elements(By.CSS_SELECTOR, 'span.comboTreeItemTitle')
 value1 = ['all'] #select all
-select_options(dropdown_list, value1)
+select_options(dropdown_list, value1)"""
 
 
