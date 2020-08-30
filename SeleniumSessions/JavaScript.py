@@ -14,7 +14,7 @@ driver.get('https://www.amazon.com/')
 
 bestseller = driver.find_element(By.LINK_TEXT, 'Best Sellers')
 
-#syntax for executing the JS within selenium
+"""#syntax for executing the JS within selenium
 #click using the JS
 driver.execute_script("arguments[0].click();", bestseller)
 
@@ -25,12 +25,17 @@ print(title)
 #refresh the page using the JS
 driver.execute_script("history.go(0);")
 
+#introducing alerts in the JS
+driver.execute_script("alert('Hello!!!');")
 
+#JS to print all text available on the page
+innertext = driver.execute_script('return document.documentElement.innerText;')
+print(innertext)"""
 
+#JS yo put a border line around any element
+driver.execute_script('argument[0].style.border = "3x solid red";', bestseller)
 
 #driver.execute_script("document.getElementById('username').value = 'test1';")
-
-
 
 #document.getElementById('username').value = 'test1';
 
