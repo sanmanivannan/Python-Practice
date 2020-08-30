@@ -61,3 +61,7 @@ fname.send_keys('fname')
 
 wait.until(ec.element_to_be_clickable((By.ID,"hs-eu-decline-button"))).click()
 
+
+
+
+
