@@ -38,6 +38,7 @@ print(col)
 
 
 def seletopt(sellopt, value):
+    sellopt.clear()
     for j in sellopt:
         if (j.text) == value:
             j.click()
@@ -91,12 +92,10 @@ for i in range(1, row):
     no_of_emp.clear()
     seletopt(no_of_emp,noofemp)
 
-    indus = driver.find_element(By.ID, 'Form_submitForm_Industry')
-    indus.clear()
+    indus = driver.find_elements(By.ID, 'Form_submitForm_Industry')
     seletopt(indus, industry)
 
-    cont = driver.find_element(By.ID, 'Form_submitForm_Country')
-    cont.clear()
+    cont = driver.find_elements(By.ID, 'Form_submitForm_Country')
     seletopt(cont, country)
 
 
