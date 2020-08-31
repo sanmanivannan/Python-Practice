@@ -27,18 +27,7 @@ col = sht.ncols
 print(row)
 print(col)
 
-
-"""def seletopt(sellopt,value):
-    select = Select(sellopt)
-    sel_opt = select.options
-        for j in sellopt:
-        if (j.text) == value:            
-            sellopt.send_keys(value)
-            break"""
-
-
 def seletopt(sellopt, value):
-    sellopt.clear()
     for j in sellopt:
         if (j.text) == value:
             j.click()
@@ -88,34 +77,12 @@ for i in range(1, row):
     contact_num.clear()
     contact_num.send_keys(phone1)
 
-    no_of_emp = driver.find_elements(By.ID, 'Form_submitForm_NoOfEmployees')
+    no_of_emp = driver.find_elements(By.XPATH, '//*[@id="Form_submitForm_NoOfEmployees"]/option')
     no_of_emp.clear()
     seletopt(no_of_emp,noofemp)
 
-    indus = driver.find_elements(By.ID, 'Form_submitForm_Industry')
+    indus = driver.find_elements(By.XPATH, '//*[@id="Form_submitForm_Industry"]/option')
     seletopt(indus, industry)
 
-    cont = driver.find_elements(By.ID, 'Form_submitForm_Country')
+    cont = driver.find_elements(By.XPATH, '//*[@id="Form_submitForm_Country"]/option')
     seletopt(cont, country)
-
-
-"""def seletopt(sellopt,value):
-    for j in sellopt:
-        if (j.text) == value:
-            no_of_emp.clear()
-            no_of_emp.send_keys(value)
-
-    no_of_emp = driver.find_element(By.ID,'Form_submitForm_NoOfEmployees')
-    no_of_emp.clear()
-    no_of_emp.send_keys(noofemp)
-
-    indus = driver.find_element(By.ID,'Form_submitForm_Industry')
-    indus.clear()
-    indus.send_keys(industry)
-
-    cont = driver.find_element(By.ID,'Form_submitForm_Country')
-    cont.clear()
-    cont.send_keys(country)"""
-
-
-
