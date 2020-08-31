@@ -27,6 +27,22 @@ col = sht.ncols
 print(row)
 print(col)
 
+
+"""def seletopt(sellopt,value):
+    select = Select(sellopt)
+    sel_opt = select.options
+        for j in sellopt:
+        if (j.text) == value:            
+            sellopt.send_keys(value)
+            break"""
+
+
+def seletopt(sellopt, value):
+    for j in sellopt:
+        if (j.text) == value:
+            j.click()
+            break
+
 for i in range(1, row):
     url = sht.cell_value(i,0)
     fname = sht.cell_value(i,1)
@@ -40,48 +56,67 @@ for i in range(1, row):
     country = sht.cell_value(i,9)
     #print(url +  fname +  lname +  email +  jobtitle + company +  phone +  noofemp +  industry + country)
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
-driver.get('https://www.orangehrm.com/orangehrm-30-day-trial/')
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver.get('https://www.orangehrm.com/orangehrm-30-day-trial/')
 
-url1 = driver.find_element(By.ID,'Form_submitForm_subdomain')
-url1.clear()
-url1.send_keys(url)
+    url1 = driver.find_element(By.ID,'Form_submitForm_subdomain')
+    url1.clear()
+    url1.send_keys(url)
 
-f_name = driver.find_element(By.ID,'Form_submitForm_FirstName')
-f_name.clear()
-f_name.send_keys(fname)
+    f_name = driver.find_element(By.ID,'Form_submitForm_FirstName')
+    f_name.clear()
+    f_name.send_keys(fname)
 
-l_name = driver.find_element(By.ID,'Form_submitForm_LastName')
-l_name.clear()
-l_name.send_keys(lname)
+    l_name = driver.find_element(By.ID,'Form_submitForm_LastName')
+    l_name.clear()
+    l_name.send_keys(lname)
 
-e_mail = driver.find_element(By.ID,'Form_submitForm_Email')
-e_mail.clear()
-e_mail.send_keys(email)
+    e_mail = driver.find_element(By.ID,'Form_submitForm_Email')
+    e_mail.clear()
+    e_mail.send_keys(email)
 
-job_title = driver.find_element(By.ID,'Form_submitForm_JobTitle')
-job_title.clear()
-job_title.send_keys(jobtitle)
+    job_title = driver.find_element(By.ID,'Form_submitForm_JobTitle')
+    job_title.clear()
+    job_title.send_keys(jobtitle)
 
-company_name = driver.find_element(By.ID,'Form_submitForm_CompanyName')
-company_name.clear()
-company_name.send_keys(company)
+    company_name = driver.find_element(By.ID,'Form_submitForm_CompanyName')
+    company_name.clear()
+    company_name.send_keys(company)
 
-contact_num = driver.find_element(By.ID,'Form_submitForm_Contact')
-contact_num.clear()
-contact_num.send_keys(phone1)
+    contact_num = driver.find_element(By.NAME,'Contact')
+    contact_num.clear()
+    contact_num.send_keys(phone1)
 
-noof_emp = driver.find_element(By.ID,'Form_submitForm_NoOfEmployees')
-noof_emp.clear()
-noof_emp.send_keys(noofemp)
+    no_of_emp = driver.find_elements(By.ID, 'Form_submitForm_NoOfEmployees')
+    no_of_emp.clear()
+    seletopt(no_of_emp,noofemp)
 
-indus = driver.find_element(By.ID,'Form_submitForm_Industry')
-indus.clear()
-indus.send_keys(industry)
+    indus = driver.find_element(By.ID, 'Form_submitForm_Industry')
+    indus.clear()
+    seletopt(indus, industry)
 
-cont = driver.find_element(By.ID,'Form_submitForm_Country')
-cont.clear()
-cont.send_keys(country)
+    cont = driver.find_element(By.ID, 'Form_submitForm_Country')
+    cont.clear()
+    seletopt(cont, country)
+
+
+"""def seletopt(sellopt,value):
+    for j in sellopt:
+        if (j.text) == value:
+            no_of_emp.clear()
+            no_of_emp.send_keys(value)
+
+    no_of_emp = driver.find_element(By.ID,'Form_submitForm_NoOfEmployees')
+    no_of_emp.clear()
+    no_of_emp.send_keys(noofemp)
+
+    indus = driver.find_element(By.ID,'Form_submitForm_Industry')
+    indus.clear()
+    indus.send_keys(industry)
+
+    cont = driver.find_element(By.ID,'Form_submitForm_Country')
+    cont.clear()
+    cont.send_keys(country)"""
 
 
 
