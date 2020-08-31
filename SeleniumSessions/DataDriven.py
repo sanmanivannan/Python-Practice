@@ -6,6 +6,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 import time
+
+
 """import xlrd
 wb = xlrd.open_workbook("new.xlsx")
 sht = wb.sheet_by_name("Sheet1")
@@ -86,3 +88,5 @@ for i in range(1, row):
 
     cont = driver.find_elements(By.XPATH, '//*[@id="Form_submitForm_Country"]/option')
     seletopt(cont, country)
+
+    driver.quit()
