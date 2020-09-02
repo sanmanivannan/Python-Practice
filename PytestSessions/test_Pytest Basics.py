@@ -24,9 +24,11 @@ py.test PytestSessions\test_Pytest_Basics1.py -m login --> specific file from a 
 """
 
 """
-To execute the testcases in the Parallel Mode
+To execute the testcases in the PARALLEL Mode
 ==============================================
 pip install pytest-xdist
+
+
 
 
 
