@@ -1,7 +1,7 @@
 import pytest
-
+@pytest.mark.login
 def test_a1():
-    assert 3 != 20
+    assert 3 = 20
 
 def test_a2():
     a = 5

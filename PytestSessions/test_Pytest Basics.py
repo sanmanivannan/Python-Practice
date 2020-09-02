@@ -13,7 +13,13 @@ py.test <testfilename.py> --> to execute the specific pytest testcase
 
 py.test -k login -v  --> this command will execute only the METHOD's who's name is like/similar 'login'
 
-py.test -m login 
+py.test -m login --> to execute only test cases associated with the MARKER login
+py.test PytestSessions\test_Pytest_Basics1.py -m login --> specific file from a dir
+
+
+
+
+
 
 """
 def test_m1():
