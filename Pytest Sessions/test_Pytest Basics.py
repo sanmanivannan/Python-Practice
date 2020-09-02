@@ -3,6 +3,10 @@ import pytest
 #all the py file name should either start or end with the name 'test'
 #even the METHODS inside the pytest file should start with the name 'test' as mentioned below
 
+#pytest commands to execute the pytest
+#do the command execution on the terminal/cmd
+
+
 def test_m1():
     a = 3
     b = 4
@@ -18,6 +22,8 @@ def test_m3():
 
 def test_m4():
     assert False
+
+
 
 
 
