@@ -1,8 +1,13 @@
 import pytest
 
 """
+Install pytest
+===============
+pip install pytest
+
 #all the py file name should either start or end with the name 'test'
 #even the METHODS inside the pytest file should start with the name 'test' as mentioned below
+
 
 #pytest commands to execute the pytest
 #do the command execution on the terminal/cmd
@@ -16,12 +21,17 @@ py.test -k login -v  --> this command will execute only the METHOD's who's name 
 py.test -m login --> to execute only test cases associated with the MARKER login
 py.test PytestSessions\test_Pytest_Basics1.py -m login --> specific file from a dir
 
+"""
 
-
+"""
+To execute the testcases in the Parallel Mode
+==============================================
+pip install pytest-xdist
 
 
 
 """
+
 def test_m1():
     a = 3
     b = 4
