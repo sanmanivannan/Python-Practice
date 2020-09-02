@@ -28,8 +28,22 @@ To execute the testcases in the PARALLEL Mode
 ==============================================
 pip install pytest-xdist
 
+to execute the test cases, as usual, execute the below command
+py.test PytestSessions\test_webpage_login.py
 
+to execute the test cases PARALLELLY
+py.test PytestSessions\test_webpage_login.py -n 3
 
+"""
+
+"""
+To generate pytest html report
+===============================
+pip install pytest-html
+
+when executing the test cases and generate HTML report, use the below command
+
+py.test <filename.py> -v -s --help=<htmlreportname.html>
 
 
 """
