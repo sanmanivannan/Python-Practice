@@ -21,10 +21,9 @@ def test_login_amazon(init_driver):
     assert driver.title == "YouTube"
 
 def test_url_check(init_driver):
-    assert driver.current_url == "https://www.youtube.com/"
+    assert driver.current_url == 'https://www.youtube.com/'
 
-"""
-The above testcases can also be written using the MARKER
+"""#The above testcases can also be written using the MARKER
 
 @pytest.mark.usefixtures("init_driver")    
 def test_login_amazon():
