@@ -1,10 +1,10 @@
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.firefox import GeckoDriverManager
 import pytest
 
+"""
+#Instead of having the FIXTURES(aka.,setup and teardown) with in the actual testcases;
+#we can write the FIXTURES separatly in the ""conftest.py"" file and can be used for any testcases within that forlder
 
-"""@pytest.fixture(params =['chrome','firefox'],scope='class')
+@pytest.fixture(params =['chrome','firefox'],scope='class')
 def init__driver(request):
     if request.param == 'chrome':
         w_browser = webdriver.Chrome(ChromeDriverManager().install())
@@ -18,15 +18,19 @@ def init__driver(request):
     w_browser.close()"""
 
 @pytest.mark.usefixtures('init__driver')
-class BaseTest():
+class BaseTest:
     pass
-class Test_Title_Check(BaseTest):
-    def test_title_check(self):
-        self.driver.get("www.google.com")
+
+class Test_Check(BaseTest):
+
+    def test_get_website(self):
+        self.driver.get("https://www.google.com/")
         self.driver.implicitly_wait(10)
+
+    def test_title_check(self):
         assert self.driver.title == 'Google'
+
     def test_url_check(self):
         self.driver.implicitly_wait(10)
-        assert self.driver.current_url == 'www.google.com'
-
-
+        assert self.driver.current_url == 'https://www.google.com/'
+        self.driver.implicitly_wait(10)
