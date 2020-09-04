@@ -2,7 +2,6 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-
 @pytest.mark.usefixtures('init__driver')
 class BaseTest:
     pass
