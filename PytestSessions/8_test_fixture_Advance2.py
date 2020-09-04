@@ -1,10 +1,11 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-import pytest
 from webdriver_manager.firefox import GeckoDriverManager
+import pytest
+
 
 @pytest.fixture(params =['chrome','firefox'],scope='class')
-def web_browser(request):
+def init__driver(request):
     if request.param == 'chrome':
         w_browser = webdriver.Chrome(ChromeDriverManager().install())
 
@@ -14,10 +15,10 @@ def web_browser(request):
     yield
     w_browser.close()
 
-@pytest.mark.usefixtures('web_browser')
-class Base_Class():
+@pytest.mark.usefixtures('init__driver')
+class BaseTest():
     pass
-class Test_Title_Check(Base_Class):
+class Test_Title_Check(BaseTest):
     def test_title_check(self):
         self.driver.get("www.google.com")
         self.driver.implicitly_wait(10)
